@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background-color: lightcoral;
+    display: grid;
+    place-items: center;
+}
+
+body {
+    width: 50%;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: cadetblue;
+    border: 4px solid aqua;
+    border-radius: 5px;
+}
+
+.game-container{
+    margin: 10px;
+    width: 100%;
+}
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    border: 4px solid aqua;
+    border-radius: 5px;
+}
+
+.card.flipped {
+    background-color: #fff;
+    color: black; 
+}
+
+.hidden {
+    display: none;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.main-moves{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.main-time{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+@media (max-width: 900px) {
+    body {
+        width: 60%; 
+    }
+
+    #card-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        font-size: 28px; 
+    }
+
+    .main-moves, .main-time {
+        font-size: 20px; 
+        margin: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        width: 60%; 
+    }
+
+    #card-container {
+        grid-template-columns: repeat(4, 1fr); 
+        display: grid;
+        justify-content: center;
+    }
+
+    .card{
+        width: 70px;
+        height: 80px;
+    }
+
+    .main-moves, .main-time {
+        font-size: 15px; 
+    }
+
+    h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 60%; 
+    }
+
+    #card-container {
+        grid-template-columns: repeat(4, 1fr); 
+        display: grid;
+        justify-content: center;
+    }
+
+    .card{
+        width: 40px;
+        height: 40px;
+    }
+
+    .main-moves, .main-time {
+        font-size: 12px; 
+    }
+
+    h1{
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    body {
+        width: 90%; 
+    }
+
+    #card-container {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        justify-items: center; 
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        font-size: 20px; 
+    }
+
+    .main-moves, .main-time {
+        font-size: 18px; 
+    }
+}
